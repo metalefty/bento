@@ -1,0 +1,21 @@
+# ignore skins included in MediaWiki
+Chick.php
+CologneBlue.php
+Modern.php
+MonoBook.php
+MySkin.php
+Nostalgia.php
+Simple.php
+Standard.php
+Vector.php
+chick/
+cologneblue/
+common/
+modern/
+monobook/
+myskin/
+nostalgia/
+simple/
+standard/
+vector/
+
