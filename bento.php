@@ -122,24 +122,11 @@ class BentoTemplate extends QuickTemplate {
 
         <?php if( $this->data['username'] == NULL ) { ?>
             <div id="login-wrapper" class="grid_4 omega">
-                <a href="<?php echo $this->data['personal_urls'][login][href] ?>">Sign up</a> | <a id="login-trigger" href="#login">Login</a>
-
-                <div id="login-form">
-		    <?php if( strpos($_SERVER["SERVER_NAME"], "stage") !== FALSE ) { ?>
-                    <form action="https://loginstage.attachmategroup.com/nidp/idff/sso?sid=0" method="post" enctype="application/x-www-form-urlencoded" name="login_form">
-                    <?php } else { ?>
-                    <form action="https://login.attachmategroup.com/nidp/idff/sso?sid=0" method="post" enctype="application/x-www-form-urlencoded" name="login_form">
-                    <?php } ?>
-		    <input name="target" value="http://<?php echo $_SERVER['SERVER_NAME'] . $this->data['personal_urls'][login][href] ?>" type="hidden"/>
-                        <input name="context" value="default" type="hidden"/>
-                        <input name="proxypath" value="reverse" type="hidden"/>
-                        <input name="message" value="Please log In" type="hidden"/>
-                        <p><label class="inlined" for="username">Username</label><input type="text" class="inline-text" name="Ecom_User_ID" value="" id="username" /></p>
-                        <p><label class="inlined" for="password">Password</label><input type="password" class="inline-text" name="Ecom_Password" value="" id="password" /></p>
-                        <p><input type="submit" value="Login" /></p>
-                        <p class="slim-footer"><a id="close-login" href="#cancel">Cancel</a></p>
-                    </form>
-                </div>
+                <?php if( $this->data['personal_urls']['login']['href'] ) { ?>
+                    <a href="<?php echo htmlspecialchars($this->data['personal_urls']['login']['href'])?>">Login</a>
+                <?php  } else { ?>
+                    <a href="<?php echo htmlspecialchars($this->data['personal_urls']['anonlogin']['href'])?>">Login</a>
+                <?php } ?>
             </div>
             <?php } else { ?>
 
