@@ -1,4 +1,6 @@
 bento
 =====
 
-A MediaWiki Skin Developed by OpenSUSE
+A MediaWiki skin originally developed by OpenSUSE.
+
+This is a fork to eat general purpose bento.
