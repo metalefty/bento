@@ -16,7 +16,7 @@ class SkinBento extends SkinTemplate {
     function setupSkinUserCss( OutputPage $out ) {
         parent::setupSkinUserCss( $out );
         // Append to the default screen common & print styles...
-        $out->addStyle( '//static.opensuse.org/themes/bento/css/style.css', 'screen' );
+        $out->addStyle( 'bento/css/style.css', 'screen' );
     }
 }
 
@@ -43,8 +43,8 @@ class BentoTemplate extends QuickTemplate {
         <![endif]-->
         <?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
         <script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/common/wikibits.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"><!-- wikibits js --></script>
-        <script type="<?php $this->text('jsmimetype') ?>" src="//static.opensuse.org/stage/themes/bento/js/jquery.js"></script>
-        <script type="<?php $this->text('jsmimetype') ?>" src="//static.opensuse.org/stage/themes/bento/js/script.js"></script>
+        <script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/bento/js/jquery.js"></script>
+        <script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/bento/js/script.js"></script>
         <script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/bento/js_local/script.js"></script>
         <script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/bento/js_local/search.js"></script>
 
