@@ -51,8 +51,6 @@ class BentoTemplate extends QuickTemplate {
         <script type="<?php $this->text('jsmimetype') ?>" src="//static.opensuse.org/themes/bento/js/l10n/global-navigation-data-<?php echo $bento_lang; ?>.js"></script>
         <script type="<?php $this->text('jsmimetype') ?>" src="//static.opensuse.org/themes/bento/js/global-navigation.js"></script>
 
-        <link rel="icon" type="image/png" href="//static.opensuse.org/themes/bento/images/favicon.png" />
-
         <!-- Head Scripts -->
                 <?php $this->html('headscripts') ?>
                 <?php if($this->data['pagecss']) { ?> <style type="text/css"><?php $this->html('pagecss') ?></style><?php }?>
