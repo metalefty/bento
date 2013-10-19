@@ -139,7 +139,7 @@ class BentoTemplate extends QuickTemplate {
                   <?php foreach($cont as $key => $val) { ?>
                   <li><a href="<?php echo htmlspecialchars($val['href']) ?>"><?php echo htmlspecialchars($val['text'])?></a></li>
                   <?php } ?>
-                 </ul>          
+                 </ul>
                </div>
                <?php } ?>
 
