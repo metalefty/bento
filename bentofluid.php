@@ -18,7 +18,7 @@ class SkinBentoFluid extends SkinTemplate {
     function setupSkinUserCss( OutputPage $out ) {
         parent::setupSkinUserCss( $out );
         // Append to the default screen common & print styles...
-        $out->addStyle( '//static.opensuse.org/themes/bento/css/style.fluid.css', 'screen' );
+        $out->addStyle( 'bento/css/style.fluid.css', 'screen' );
     }
 }
 
